@@ -15,10 +15,6 @@ const profile = () => {
 
     // Access the user ID
     const user = state.user;
-  
-    if(user){
-        alert("NOTICE:-")
-    }
 
 
     console.log("userId_-}", user)
