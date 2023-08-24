@@ -6,6 +6,7 @@ import { faBarsProgress, faCloudArrowDown, faGift, faMoneyBillTransfer, faSackDo
 import { useNavigate } from 'react-router-dom'
 import Carousel from './carousel'
 import SliderNews from './newsSlider'
+import Blogs from './blogs'
 
 const Dashboard = () => {
     const navigate = useNavigate()
@@ -68,6 +69,10 @@ const Dashboard = () => {
                     <span className='text-xl my-2 text-black'>APP download</span>
                 </div>
             </div>
+
+            {/*  */}
+            <Blogs />
+            {/*  */}
             <Navbar />
         </div>
     )

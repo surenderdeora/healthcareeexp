@@ -8,14 +8,19 @@ import { useAuth } from '../context/AuthContext'
 import { useNavigate } from 'react-router-dom'
 
 const profile = () => {
+
     const navigate = useNavigate()
     const { state } = useAuth();
 
 
     // Access the user ID
     const user = state.user;
-
   
+    if(user){
+        alert("NOTICE:-")
+    }
+
+
     console.log("userId_-}", user)
     // console.log("userdata_-}", userdata)
     return (
@@ -102,7 +107,7 @@ const profile = () => {
                         </div>
                         <span className='text-xl my-2 text-black'>Bind bank account</span>
                     </div>
-                    <div onClick={()=>navigate('/referallink')} className='w-full md:w-[400px] flex flex-col justify-center items-center cursor-pointer   '>
+                    <div onClick={() => navigate('/referallink')} className='w-full md:w-[400px] flex flex-col justify-center items-center cursor-pointer   '>
                         <div className='px-5 pt-5  rounded-3xl '>
                             <FontAwesomeIcon icon={faPersonCirclePlus} className='text-[#587bf7] text-6xl' />
                         </div>
